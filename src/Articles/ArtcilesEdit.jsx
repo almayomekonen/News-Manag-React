@@ -128,7 +128,9 @@ export default function ArticlesEdit() {
               ></textarea>
             </label>
 
-            <button>{item.id ? "Save" : "Add"}</button>
+            <div className="save-add-Btn">
+              <button>{item.id ? "Save" : "Add"}</button>
+            </div>
           </form>
         </>
       )}

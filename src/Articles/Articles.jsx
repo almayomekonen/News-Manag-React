@@ -54,6 +54,7 @@ const Article = () => {
             <th>discription</th>
             <th>addedTime</th>
             <th>publishDate</th>
+            <th>🗑️ 📝</th>
           </tr>
         </thead>
 
