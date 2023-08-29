@@ -1,0 +1,85 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+tr {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+thead tr {
+  background-color: #282c34;
+  color: #61dafb;
+}
+
+tr:nth-child(even) {
+  background-color: #d9d9d9;
+}
+
+th,
+td {
+  padding: 6px;
+  text-align: center;
+}
+
+td button {
+  margin: 0;
+  background: none;
+  color: initial;
+  display: inline;
+  padding: 5px 8px;
+  border-radius: 50%;
+  width: initial;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+td button:hover {
+  background-color: #3c3c3c;
+  color: white;
+  box-shadow: 0 0 4px #d6d6d6;
+}
+
+td button.green:hover {
+  background-color: #3dbf23;
+}
+
+td button.red:hover {
+  background-color: #bf2323;
+}
+
+td button:active {
+  transform: scale(1.3);
+}
+
+tr td:last-child {
+  white-space: nowrap;
+}
+
+.returnLink a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #61dafb;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+button.returnLink {
+  margin: 10px 0 0 0;
+  width: initial;
+  font-size: 1em;
+  background: #282c34;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.returnLink svg {
+  position: relative;
+  top: 3px;
+  right: -2px;
+}
+
+.returnLink:hover a {
+  text-decoration: underline;
+}
