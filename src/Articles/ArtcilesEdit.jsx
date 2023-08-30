@@ -59,14 +59,14 @@ export default function ArticlesEdit() {
         body: JSON.stringify(item),
       }
     ).then(() => {
-      navigate("/");
+      navigate("/article");
     });
   };
 
   return (
     <div className="ArticlesEdit">
       <button className="returnLink">
-        <Link to="/">
+        <Link to="/article">
           <AiOutlineRight /> Back to Article List
         </Link>
       </button>
