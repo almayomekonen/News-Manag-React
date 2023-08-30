@@ -2,11 +2,22 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 16px;
+  table-layout: fixed;
 }
-
+/* Responsiveness */
+@media (max-width: 768px) {
+  table {
+    margin-top: 10px;
+  }
+}
 tr {
   background-color: white;
   transition: background-color 0.3s ease-in-out;
+}
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 thead tr {

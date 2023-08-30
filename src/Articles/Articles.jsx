@@ -5,7 +5,7 @@ import { FaRecycle } from "react-icons/fa6";
 import moment from "moment";
 import "./Articles.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import TableCell from "../components/TableCell/Tabelcell";
 const Article = () => {
   const [articles, setArticles] = useState([]);
   const { setIsLoader, snackbar } = useContext(GeneralContext);
@@ -62,6 +62,7 @@ const Article = () => {
             <th>discription</th>
             <th>addedTime</th>
             <th>publishDate</th>
+            <th></th>
             <th>🗑️ 📝</th>
           </tr>
         </thead>
@@ -75,6 +76,7 @@ const Article = () => {
               <td>{i + 1}</td>
               <td>{article.headline}</td>
               <td>{article.views}</td>
+              <TableCell content={article.description} />
               <td>{article.description}</td>
               <td>{moment(article.publishDate).format("MM/DD")}</td>
               <td>{moment(article.addedTime).format("MM/DD/YY")}</td>
