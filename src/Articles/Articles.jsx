@@ -73,7 +73,7 @@ const Article = () => {
               key={article.id}
             >
               <td>{i + 1}</td>
-              <td>{article.headline}</td>
+              <TableCell content={article.headline} />
               <td>{article.views}</td>
               <TableCell content={article.description} />
               <td>{moment(article.publishDate).format("MM/DD")}</td>
