@@ -9,8 +9,8 @@ const TableCell = ({ content }) => {
     <>
       <td
         className="display-content"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
       >
         {hover ? <DisplayContent content={content} /> : content}
       </td>

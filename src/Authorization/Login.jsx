@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GeneralContext } from "../App/App";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -85,6 +86,10 @@ const Login = () => {
 
           <button>Login</button>
         </form>
+
+        <p className="signup">
+          <Link to="/signup">Click here to log in</Link>
+        </p>
       </div>
     </>
   );

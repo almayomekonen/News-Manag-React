@@ -8,7 +8,7 @@ html {
 body {
   direction: rtl;
   padding-bottom: 200px;
-  background-color: #1a1a1a;
+  background-color: #282c34;
 }
 
 * {
@@ -19,13 +19,11 @@ h2 {
   font-size: 18px;
   font-weight: bold;
   padding: 12px 0;
-  margin: 0;
-  color: #e74c3c;
-  font-weight: bold;
+  margin: 0px;
 }
 
 button {
-  background-color: #3498db;
+  background-color: #d2009e;
   color: white;
   padding: 8px 12px;
   border-radius: 6px;
@@ -44,14 +42,14 @@ button:disabled {
 
 input,
 select {
-  border: 1px solid #2ecc71;
+  border: 1px solid black;
   padding: 8px 12px;
   border-radius: 5px;
   margin-top: 3px;
 }
 
 h1 {
-  color: #f39c12;
+  color: #61dafb;
   text-align: center;
   font-size: 2.5em;
 }
@@ -60,33 +58,39 @@ h1 {
   width: 85%;
   max-width: 900px;
   min-height: 300px;
-  background-color: #ecf0f1;
+  background-color: #ffffffc9;
   margin: auto;
   padding: 8px 16px;
   border-radius: 6px;
   box-sizing: border-box;
 }
-
+a {
+  color: black;
+  font-weight: bold;
+}
 .smallFrame {
   width: 250px;
   margin: 16px auto;
-  background-color: #3498db;
+  background-color: #b4efff;
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0 0 3px #2c3e50;
+  box-shadow: 0 0 40px #585555;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
-  color: #e67e22;
-  font-weight: bold;
 }
 
 input,
 textarea {
   display: block;
-  border: 1px solid #d35400;
+  border: 1px solid black;
   padding: 8px 12px;
   border-radius: 5px;
   margin-top: 3px;
@@ -96,15 +100,16 @@ textarea {
 
 button {
   margin: 24px 0 8px 0;
-  background-color: #1abc9c;
+  background-color: #282c34;
   display: block;
+  width: 100%;
   font-size: 1.2em;
   font-weight: bold;
   cursor: pointer;
 }
 
 div.fieldError {
-  background-color: #e74c3c;
+  background-color: #ffdcdc;
   padding: 6px;
   border-radius: 4px;
   margin: -8px 0px 6px 0;
@@ -112,14 +117,13 @@ div.fieldError {
 
 input.fieldError,
 textarea.fieldError {
-  border-color: #e74c3c;
-  outline-color: #e74c3c;
+  border-color: red;
+  outline-color: red;
 }
 
 .loader {
   font-size: 4em;
   margin: 0;
-  color: #3498db;
 }
 
 .user {
@@ -136,13 +140,13 @@ textarea.fieldError {
   grid-template-columns: repeat(5, 1fr);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 6px #27ae60;
+  box-shadow: 0 0 6px #979797;
 }
 
 .grid div {
   padding: 12px;
   text-align: center;
-  border-bottom: 1px solid #2c3e50;
+  border-bottom: 1px solid #282c34;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,11 +162,11 @@ textarea.fieldError {
 .grid div:nth-child(10n + 3),
 .grid div:nth-child(10n + 4),
 .grid div:nth-child(10n + 5) {
-  background-color: #f39c12;
+  background-color: #dcdcdc;
 }
 
 .grid div:nth-child(-n + 5) {
-  background-color: #27ae60;
+  background-color: #61dafb;
   font-weight: bold;
 }
 
@@ -171,12 +175,11 @@ textarea.fieldError {
   margin: 0;
   transition: 0.3s;
   cursor: pointer;
-  color: #c0392b;
 }
 
 .remove:hover,
 .save:hover {
-  transform: scale(1.5);
+  scale: 1.5;
 }
 
 .remove {
@@ -189,23 +192,22 @@ button.logout {
   margin: 0 3px;
   font-size: 12px;
   padding: 4px 8px;
-  background-color: #34495e;
+  background-color: gray;
   cursor: pointer;
   transition: 0.3s;
 }
 
 button.logout:hover {
-  background-color: #e74c3c;
+  background-color: red;
 }
 
 button.logout:active {
-  transform: scale(1.2);
+  scale: 1.2;
 }
 
 .signup {
   cursor: pointer;
   text-align: center;
-  color: #3498db;
 }
 
 .signup:hover {
@@ -213,7 +215,7 @@ button.logout:active {
 }
 
 .noData {
-  color: #95a5a6;
+  color: gray;
   font-size: 3em;
   margin: 0.2em;
   font-weight: normal;
@@ -233,15 +235,15 @@ button.logout:active {
   width: 80%;
   max-width: 400px;
   min-height: 300px;
-  background-color: #ffffff;
-  box-shadow: 0 0 6px #333333;
+  background-color: white;
+  box-shadow: 0 0 6px black;
   border-radius: 5px;
   margin: auto;
-  animation: slide-up 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.555s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .modal h2 {
-  color: #e74c3c;
+  color: #282c34;
 }
 
 .modal .close {
@@ -259,55 +261,22 @@ button.logout:active {
 }
 
 .modal .close:hover {
-  background-color: #c0392b;
+  background-color: #af0000;
   color: white;
   border-radius: 50%;
-  transform: rotate(360deg);
+  rotate: 360deg;
 }
 
 .modal form {
   padding: 24px;
 }
 
-@keyframes slide-up {
+@keyframes slide-bottom {
   0% {
-    transform: translateY(50px);
-    opacity: 0;
+    transform: translateY(-200px);
   }
 
   100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-/* responsivnes */
-
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 100px;
-  }
-  .frame,
-  .smallFrame,
-  .modal {
-    width: 100%;
-    max-width: none;
-  }
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding-bottom: 50px;
-  }
-  h1 {
-    font-size: 1.8em;
-  }
-  h2 {
-    font-size: 16px;
-  }
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
+    transform: translateY(100px);
   }
 }
