@@ -62,7 +62,6 @@ const Article = () => {
             <th>discription</th>
             <th>addedTime</th>
             <th>publishDate</th>
-            <th></th>
             <th>🗑️ 📝</th>
           </tr>
         </thead>
@@ -77,7 +76,6 @@ const Article = () => {
               <td>{article.headline}</td>
               <td>{article.views}</td>
               <TableCell content={article.description} />
-              <td>{article.description}</td>
               <td>{moment(article.publishDate).format("MM/DD")}</td>
               <td>{moment(article.addedTime).format("MM/DD/YY")}</td>
               <td>
@@ -86,7 +84,6 @@ const Article = () => {
                     <AiFillEdit />
                   </button>
                 </Link>
-
                 <button onClick={() => remove(article.id)} className="red">
                   <AiFillDelete />
                 </button>
