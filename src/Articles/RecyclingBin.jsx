@@ -42,7 +42,7 @@ const RecyclingBin = () => {
   return (
     <>
       <div>
-        <button onClick={() => navigate("/article")} className="btnFrame">
+        <button onClick={() => navigate("/")} className="btnFrame">
           <AiOutlineAlignRight /> Back
         </button>
       </div>

@@ -8,7 +8,7 @@ import RecyclingBin from "./Articles/RecyclingBin";
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/article" element={<Article />} />
+      <Route path="/" element={<Article />} />
       <Route path="/article/:id" element={<ArticleEdit />} />
       <Route path="/recycle-bin" element={<RecyclingBin />} />
     </Routes>

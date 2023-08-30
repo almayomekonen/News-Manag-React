@@ -15,7 +15,7 @@ export default function ArticlesEdit() {
     // Check whether the article exists or not
     if (id === "new") {
       setItem({
-        publishDate: "",
+        publishDate: moment("MM/DD/YYYY"),
         headline: "",
         description: "",
         content: "",
@@ -59,14 +59,14 @@ export default function ArticlesEdit() {
         body: JSON.stringify(item),
       }
     ).then(() => {
-      navigate("/article");
+      navigate("/");
     });
   };
 
   return (
     <div className="ArticlesEdit">
       <button className="returnLink">
-        <Link to="/article">
+        <Link to="/">
           <AiOutlineRight /> Back to Article List
         </Link>
       </button>
