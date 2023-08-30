@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { GeneralContext } from "../App/App";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
+import { FaRecycle } from "react-icons/fa6";
 import moment from "moment";
 import "./Articles.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -43,7 +44,14 @@ const Article = () => {
 
   return (
     <>
-      <button onClick={() => navigate("/article/new")}>New article +</button>
+      <div className="btnFrame">
+        <button className="returnLink" onClick={() => navigate("/article/new")}>
+          New article +
+        </button>
+        <button className="returnLink" onClick={() => navigate("/recycle-bin")}>
+          recycle-bin <FaRecycle />
+        </button>
+      </div>
 
       <table>
         <thead>
