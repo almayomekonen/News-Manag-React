@@ -11,7 +11,7 @@ const Logout = () => {
     }).then(() => {
       setUser(null);
       setIsLoader(false);
-      snackbar("user Disconnected successfully");
+      snackbar("user disconnected successfully");
     });
   };
 

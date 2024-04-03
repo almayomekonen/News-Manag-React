@@ -53,6 +53,7 @@ const Signup = () => {
         }
       })
       .then(() => {
+        snackbar("Signed up successfully");
         navigate("/");
       })
       .catch((err) => {

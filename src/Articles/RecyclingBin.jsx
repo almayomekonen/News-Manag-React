@@ -36,6 +36,7 @@ const RecyclingBin = () => {
     }).then(() => {
       setArticle(article.filter((article) => article.id !== ArticleId));
       setIsLoader(false);
+      snackbar("Article Restored successfully");
     });
   };
 

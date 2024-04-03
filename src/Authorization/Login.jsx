@@ -51,6 +51,7 @@ const Login = () => {
       })
       .then((data) => {
         setUser(data);
+        snackbar("user logged in");
       })
       .catch((err) => {
         snackbar(err.message);

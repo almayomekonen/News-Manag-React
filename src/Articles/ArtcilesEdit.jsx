@@ -12,7 +12,6 @@ export default function ArticlesEdit() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check whether the article exists or not
     if (id === "new") {
       setItem({
         publishDate: moment("MM/DD/YYYY"),
@@ -24,7 +23,6 @@ export default function ArticlesEdit() {
     } else {
       setIsLoader(true);
 
-      // Fetch the article for editing using a GET request to the server
       fetch(`https://api.shipap.co.il/articles/${id}`, {
         credentials: "include",
       })
@@ -34,7 +32,6 @@ export default function ArticlesEdit() {
     }
   }, [id]);
 
-  // Function to handle changes in input fields
   const handleInput = (ev) => {
     const { name, value } = ev.target;
 
@@ -44,22 +41,30 @@ export default function ArticlesEdit() {
     });
   };
 
-  // Function to save the article
-  const save = (ev) => {
+  const saveArticle = (ev) => {
     ev.preventDefault();
     setIsLoader(true);
 
-    // Perform a POST or PUT request to the server based on the desired action (create or edit)
+    const action = item.id ? "PUT" : "POST";
+
     fetch(
       `https://api.shipap.co.il/articles` + (item.id ? `/${item.id}` : ""),
       {
         credentials: "include",
-        method: item.id ? "PUT" : "POST",
+        method: action,
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(item),
       }
     ).then(() => {
-      navigate("/");
+      if (action === "POST") {
+        snackbar("Artical Added");
+      } else {
+        snackbar("Article Edited");
+      }
+
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
     });
   };
 
@@ -75,7 +80,7 @@ export default function ArticlesEdit() {
         <>
           <h2>{item.id ? "Edit" : "Add"} Article</h2>
 
-          <form onSubmit={save}>
+          <form onSubmit={saveArticle}>
             <label>
               Headline:
               <input
