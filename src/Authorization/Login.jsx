@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GeneralContext } from "../App/App";
+import "./Authorization.css";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -74,7 +75,6 @@ const Login = () => {
               onChange={handleInput}
             />
           </label>
-
           <label>
             Password:
             <input
@@ -84,8 +84,9 @@ const Login = () => {
               onChange={handleInput}
             />
           </label>
-
-          <button>Login</button>
+          <div className="center">
+            <button>Login</button>
+          </div>
         </form>
 
         <p className="signup">

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { GeneralContext } from "../App/App";
 import { Link, useNavigate } from "react-router-dom";
+import "./Authorization.css";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -77,7 +78,6 @@ const Signup = () => {
               onChange={handleInput}
             />
           </label>
-
           <label>
             Email:
             <input
@@ -87,7 +87,6 @@ const Signup = () => {
               onChange={handleInput}
             />
           </label>
-
           <label>
             Username:
             <input
@@ -97,7 +96,6 @@ const Signup = () => {
               onChange={handleInput}
             />
           </label>
-
           <label>
             Password:
             <input
@@ -107,13 +105,14 @@ const Signup = () => {
               onChange={handleInput}
             />
           </label>
-
-          <button>Sign Up</button>
+          <div className="center">
+            <button>Sign Up</button>
+          </div>
         </form>
       </div>
 
       <p className="signup">
-        <Link to="/">Click here to log in</Link>
+        <Link to="/">Click here to sign up</Link>
       </p>
     </>
   );
